@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="styles/style.css" />
     </head>
     <body>
 
@@ -39,6 +40,31 @@
         </script>
 
         <script src="js/lib/vue.js"></script>
-        <script src="js/script.js"></script>
+        <script src="js/userJson.js"></script>
+
+        <script>
+            var usersList = {
+                name: 'UsersList',
+                template: '#users-component',
+                props: {
+                    list: {
+                        type: Array,
+                        required: true
+                    }
+                }
+            };
+
+            var app = new Vue({
+                el: '#app',
+                components: {
+                    'users-list': usersList
+                },
+                data: function() {
+                    return {
+                        list: json
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
