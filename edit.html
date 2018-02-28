@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+</head>
+<body>
 
-    <div id="app">
-        <h1>{{ title }}</h1>
-    </div>
+<div id="app">
+    <users-list :list="list"/>
+</div>
 
-    <script src="vue.js"></script>
-    <script src="script.js"></script>
-    </body>
+<script id="user-component">
+    <form action="#" class="form">
+        <div class="form__row">
+        <label class="form__label">firstName</label>
+        <input type="text" class="form__input" v:model="user.firstName">
+        </div>
+        <div class="form__row">
+        <label class="form__label">lastName</label>
+        <input type="text" class="form__input" v:model="user.lastName">
+        </div>
+        <div class="form__row">
+        <label class="form__label">Age</label>
+        <input type="text" class="form__input" v:model="user.age">
+        </div>
+        <div class="form__row">
+        <label class="form__label">Email</label>
+        <input type="email" class="form__input" v:model="user.email">
+        </div>
+        <div class="form__row">
+        <label class="form__label">phone</label>
+        <input type="text" class="form__input" v:model="user.phone">
+        </div>
+        <div class="form__row">
+        <label class="form__label">company</label>
+        <input type="text" class="form__input" v:model="user.company">
+        </div>
+        </form>
+</script>
+
+<script src="js/lib/vue.js"></script>
+<script src="js/script.js"></script>
+</body>
 </html>

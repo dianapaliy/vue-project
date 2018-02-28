@@ -140,14 +140,28 @@ var usersList = {
     }
 };
 
+var userData = {
+    name: 'UserData',
+    template: '#user-component',
+    props: {
+        user: {
+            type: Object,
+            required: true
+        }
+    }
+};
+
 var app = new Vue({
     el: '#app',
     components: {
-        'users-list': usersList
+        'users-list': usersList,
+        'user-data': userData
     },
     data: function() {
         return {
-            list: json
+            list: json,
+            user: json[0]
         }
     }
 });
+
