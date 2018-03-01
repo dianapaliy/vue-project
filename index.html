@@ -26,7 +26,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(item, index) in list" :key="item.name">
+                    <tr v-for="(item, index) in list" :key="index">
                         <td>{{ item.id }}</td>
                         <td>{{ item.firstName }}</td>
                         <td>{{ item.lastName }}</td>
