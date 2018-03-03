@@ -18,11 +18,9 @@
         },
         methods: {
             loadData() {
-                var self = this;
-
                 axios.get('http://localhost:3000/users')
-                    .then(function(response) {
-                        self.user = response.data[0];
+                    .then(response => {
+                        this.user = response.data[0];
                     })
 
             }
