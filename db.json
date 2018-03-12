@@ -49,6 +49,22 @@
       "registered": "19.01.2015"
     },
     {
+      "id": 3,
+      "isActive": false,
+      "balance": "$1,955.97",
+      "picture": "http://placehold.it/128x128",
+      "age": 35,
+      "accessLevel": "user",
+      "firstName": "San",
+      "lastName": "Ev",
+      "company": "ZENTIME",
+      "email": "santana.everett@zentime.co.uk",
+      "phone": "+7 (801) 401-3792",
+      "address": "671 Bartlett Place, Englevale, New Jersey, 8332",
+      "about": "Ipsum sit sint qui duis pariatur velit elit et dolore. Labore do cillum culpa et exercitation occaecat. Incididunt irure aliquip sunt laborum enim enim esse cillum.",
+      "registered": "12.01.2018"
+    },
+    {
       "id": 4,
       "isActive": false,
       "balance": "$1,955.97",
