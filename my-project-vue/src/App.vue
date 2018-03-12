@@ -9,9 +9,6 @@
                     <router-link tag="li" class="nav-item" active-class="active" to="/list-of-users" exact>
                         <a class="nav-link">Список пользователей</a>
                     </router-link>
-                    <router-link tag="li" class="nav-item" active-class="active" to="/edit" exact>
-                        <a class="nav-link">Редактировать</a>
-                    </router-link>
                 </ul>
             </div>
         </nav>
