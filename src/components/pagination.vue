@@ -24,25 +24,15 @@
             },
         },
 
-        data: ()=> {
-            return {
-                pages: [],
-            }
-        },
+        computed: {
+            pages() {
+                const numberPages = Math.ceil(this.users.length/this.elementsPerPage);
 
-        mounted: function() {
-            this.pagesArray()
+                return new Array(numberPages).fill(0).map((x, i) => ++i)
+            },
         },
 
         methods: {
-            pagesArray: function() {
-                console.log(123);
-
-                const numberPages = Math.ceil(this.users.length/this.elementsPerPage);
-
-                this.pages = new Array(numberPages).fill(0).map((x, i) => ++i)
-            },
-
             isActive(page) {
                 const clickedPage = this.currentPage || 1;
 
