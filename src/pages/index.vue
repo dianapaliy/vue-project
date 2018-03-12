@@ -54,6 +54,8 @@
             },
 
             perPageChange(count) {
+                this.currentPage = 1;
+
                 return this.elementsPerPage = count
             }
         }
