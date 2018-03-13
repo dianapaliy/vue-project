@@ -38,8 +38,6 @@
 </template>
 
 <script>
-    import axios from '@/axios.js'
-
     export default {
         name: 'users',
         components: {
@@ -47,9 +45,18 @@
             'pagination': () => import('@/components/pagination'),
         },
 
+        model: {
+            prop: 'users'
+        },
+
+        props: {
+            users: {
+                type: Array,
+                required: true
+            }
+        },
+
         data: () => ({
-            restUrl: '/users',
-            users: [],
             filteredUsers: [],
             options: [2, 4, 6, 8, 10],
             elementsPerPage: 4,
@@ -71,17 +78,5 @@
                 this.currentPage = 1
             }
         },
-
-        mounted: function () {
-            this.loadData();
-        },
-
-        methods: {
-            loadData() {
-                axios.get(this.restUrl).then(({data}) => {
-                    this.users = data
-                })
-            },
-        }
     }
 </script>
