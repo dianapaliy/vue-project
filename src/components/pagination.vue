@@ -1,7 +1,20 @@
 <template>
     <ul class="pagination justify-content-center">
-        <li class="page-item" v-for="(page, index) in pages" :key="index" :class="{ active: isActive(page) }">
-            <a class="page-link" @click="pageClicked(page)">{{ page }}</a>
+        <li class="page-item" :class="{ disabled: currentPage === 1 }">
+            <button class="page-link" type="button" @click="preventPage">
+                &laquo;
+            </button>
+        </li>
+
+        <li class="page-item" v-for="page in pages" :key="page" :class="{ active: currentPage === page }">
+            <span v-if="currentPage === page" class="page-link">{{ page }}</span>
+            <button v-else type="button" class="page-link" @click="pageClicked(page)">{{ page }}</button>
+        </li>
+
+        <li class="page-item" :class="{ disabled: currentPage === pages }">
+            <button class="page-link" type="button" @click="nextPage">
+                &raquo;
+            </button>
         </li>
     </ul>
 </template>
@@ -9,9 +22,12 @@
 <script>
     export default {
         name: 'pagination',
+        model: {
+            prop: 'currentPage',
+        },
         props: {
-            users: {
-                type: Array,
+            usersLength: {
+                type: Number,
                 required: true
             },
             elementsPerPage: {
@@ -26,22 +42,22 @@
 
         computed: {
             pages() {
-                const numberPages = Math.ceil(this.users.length/this.elementsPerPage);
-
-                return new Array(numberPages).fill(0).map((x, i) => ++i)
+                return Math.ceil(this.usersLength/this.elementsPerPage)
             },
         },
 
         methods: {
-            isActive(page) {
-                const clickedPage = this.currentPage || 1;
-
-                return clickedPage === page;
-            },
-
             pageClicked(page) {
-                this.$emit('pageChange', page);
+                this.$emit('input', page);
             },
+
+            preventPage() {
+                this.pageClicked(this.currentPage - 1)
+            },
+
+            nextPage() {
+                this.pageClicked(this.currentPage + 1)
+            }
         },
     }
 </script>

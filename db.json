@@ -4,7 +4,7 @@
       "id": 0,
       "isActive": true,
       "balance": "$1,098.42",
-      "picture": "https://i.imgur.com/JHlVNEh.jpg",
+      "picture": "https://i.imgur.com/x1KsqdV.png",
       "age": 34,
       "accessLevel": "user",
       "firstName": "Roselina",
@@ -175,6 +175,17 @@
       "address": "199 Hart Place, Volta, Indiana, 2881",
       "about": "Amet sunt minim aliquip ad voluptate veniam magna est adipisicing amet eiusmod in eu. Ad ullamco minim labore sunt incididunt exercitation enim pariatur. Consectetur esse laborum laborum cillum cupidatat ullamco. Aliquip amet qui anim do ullamco fugiat reprehenderit pariatur proident.",
       "registered": "08.02.2014"
+    },
+    {
+      "id": 11,
+      "isActive": false,
+      "picture": "http://placehold.it/128x128",
+      "age": "34",
+      "firstName": "erer",
+      "lastName": "erer",
+      "company": "dfdfdf",
+      "email": "dfdf",
+      "phone": "343434"
     }
   ]
 }

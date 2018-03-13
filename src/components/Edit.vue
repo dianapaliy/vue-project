@@ -10,7 +10,7 @@
         </div>
         <div class="form-group">
             <label >Age</label>
-            <input type="text" class="form-control" v-model="user.age"/>
+            <input type="number" class="form-control" v-model="user.age"/>
         </div>
         <div class="form-group">
             <label >Email</label>
@@ -24,60 +24,27 @@
             <label >Company</label>
             <input type="text" class="form-control" v-model="user.company"/>
         </div>
-        <div class="form-group">
-            <label >Image</label>
-            <div>
-                <img class="img-thumbnail" :src="user.picture" alt="">
-            </div>
 
-            <input type="file" class="hidden" ref="imageInput" @change="upload">
-            <button type="button" class="btn btn-primary" @click="selectNewFile">
-                Load image
-            </button>
-        </div>
+        <avatar v-model="user.picture"/>
     </form>
 </template>
 
 <script>
-    import axios from 'axios'
+    import axios from '@/axios'
 
     export default {
         name: 'UserData',
+        components: {
+            Avatar: () => import('@/components/avatar')
+        },
+        model: {
+            prop: 'user',
+        },
         props: {
             user: {
                 type: Object,
                 required: true
             }
         },
-        methods: {
-            selectNewFile() {
-                this.$refs.imageInput.click()
-            },
-            upload() {
-                const url = 'https://api.imgur.com/3/image';
-                const data = new FormData();
-
-                data.append('image', this.$refs.imageInput.files[0]);
-
-                const config = {
-                    headers: {
-                        'Authorization': 'Client-ID 3bef0b8892d4b04'
-                    }
-                };
-
-                axios.post(url, data, config)
-                    .then(response => response.data)
-                    .then(response => {
-                        this.user.picture = response.data.link;
-                        this.$refs.imageInput.value = '';
-                    })
-            }
-        }
     }
 </script>
-
-<style>
-    .hidden {
-        display: none;
-    }
-</style>

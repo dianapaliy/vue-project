@@ -4,8 +4,9 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-        mode: 'history',
-        routes: [
+    mode: 'history',
+    linkActiveClass: 'active',
+    routes: [
         {
             path: '/',
             name: 'Main',
@@ -20,6 +21,11 @@ export default new Router({
             path: '/list-of-users/edit/:id',
             name: 'Edit',
             component: () => import('@/pages/edit')
+        },
+        {
+            path: '/list-of-users/create',
+            name: 'Create',
+            component: () => import('@/pages/create')
         }
     ]
 })

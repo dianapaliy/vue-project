@@ -1,8 +1,8 @@
 <template>
     <div class="select-wr">
         <label for="select">Кол-во пользователей на странице</label>
-        <select class="form-control" v-model="elementsPerPage" id="select" @change="perPageChange(elementsPerPage)">
-            <option v-for="(option, index) in options" :value="option" :key="option.index">
+        <select class="form-control" :value="elementsPerPage" id="select" @input="perPageChange($event.target.value)">
+            <option v-for="option in options" :value="option" :key="option">
                 {{ option }}
             </option>
         </select>
@@ -12,20 +12,22 @@
 <script>
     export default {
         name: 'select-users',
+        model: {
+            prop: 'elementsPerPage',
+        },
         props: {
             options: {
                 type: Array,
                 required: true
-            }
-        },
-        data: () => {
-            return {
-                elementsPerPage: 4
-            }
+            },
+            elementsPerPage: {
+                type: Number,
+                required: true
+            },
         },
         methods: {
             perPageChange(count) {
-                this.$emit('perPageChange', count);
+                this.$emit('input', count);
             },
         }
     }
