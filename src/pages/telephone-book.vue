@@ -11,10 +11,7 @@
                     <th>№</th>
                     <th>Имя</th>
                     <th>Фамилия</th>
-                    <th>Возраст</th>
-                    <th>Email</th>
                     <th>Телефон</th>
-                    <th>Активен</th>
                 </tr>
 
                 <template slot="body" slot-scope="props">
@@ -25,10 +22,7 @@
                     </td>
                     <td>{{ props.firstName }}</td>
                     <td>{{ props.lastName }}</td>
-                    <td>{{ props.age }}</td>
-                    <td>{{ props.email }}</td>
                     <td>{{ props.phone }}</td>
-                    <td>{{ props.isActive }}</td>
                 </template>
             </users-table>
         </div>

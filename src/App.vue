@@ -12,6 +12,9 @@
                     <router-link tag="li" class="nav-item" to="/list-of-users/create" exact>
                         <a class="nav-link">Добавить нового пользователя</a>
                     </router-link>
+                    <router-link tag="li" class="nav-item" to="/telephone-book" exact>
+                        <a class="nav-link">Телефонный справочник</a>
+                    </router-link>
                 </ul>
             </div>
         </nav>
@@ -23,6 +26,7 @@
 </template>
 
 <script>
+    import 'font-awesome/css/font-awesome.css'
     import 'bootstrap/dist/css/bootstrap.css'
 
     export default {

@@ -26,6 +26,11 @@ export default new Router({
             path: '/list-of-users/create',
             name: 'Create',
             component: () => import('@/pages/create')
-        }
+        },
+        {
+            path: '/telephone-book',
+            name: 'TelephoneBook',
+            component: () => import('@/pages/telephone-book')
+        },
     ]
 })

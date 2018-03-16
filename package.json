@@ -13,8 +13,15 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
+    "flatpickr": "^4.3.2",
+    "font-awesome": "^4.7.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-checkbox-radio": "^0.6.0",
+    "vue-dropzone": "^1.0.4",
+    "vue-html-editor": "^0.2.1",
+    "vue-router": "^3.0.1",
+    "vue-text-editor": "^1.1.1",
+    "vue2-editor": "^2.4.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

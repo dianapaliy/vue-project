@@ -4,8 +4,8 @@
       "id": 0,
       "isActive": true,
       "balance": "$1,098.42",
-      "picture": "https://i.imgur.com/x1KsqdV.png",
-      "age": 34,
+      "picture": "https://i.imgur.com/239tI09.png",
+      "age": 3,
       "accessLevel": "user",
       "firstName": "Roselina",
       "lastName": "Duran",
@@ -13,8 +13,9 @@
       "email": "rose.duran@rockyard.io",
       "phone": "+7 (806) 556-2969",
       "address": "532 Cropsey Avenue, Lydia, Maryland, 6476",
-      "about": "Ipsum ipsum in quis aliquip. Nostrud amet quis mollit cupidatat enim qui exercitation ex velit excepteur aliqua anim officia sint. Exercitation ea elit occaecat aliqua ex ea amet non deserunt nostrud ad sit.",
-      "registered": "10.03.2015"
+      "about": "<p>Ipsum ipsum in quis ali343411</p>",
+      "registered": "11.03.2015",
+      "active": true
     },
     {
       "id": 1,
